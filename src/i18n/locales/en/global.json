@@ -1,0 +1,50 @@
+{
+  "validation": {
+    "isEmpty": "Field is empty",
+    "required": "Field is required",
+    "textFieldLength": "This field must include a minimum of 3 and a maximum of 64 latin or numeric symbols",
+    "requiredMinLength": "It must be at least {{ value }} characters long",
+    "requiredMaxLength": "It should contain no more than {{ value }} characters",
+    "requiredMinMaxLength": "It must be at least {{ valueMin }} and no more than {{ valueMax }} characters",
+    "emailRequired": "Please enter an email address",
+    "emailValid": "Please enter a valid email address",
+    "passwordRequired": "Please enter a password",
+    "passwordValid": "Please choose a stronger password. It should contain at least 8 characters both lower (a-z) and upper case letters (A-Z) at least 1 number (0-9)",
+    "passwordDontMatch": "The password does not match",
+    "firstNameRequired": "Please enter your first name",
+    "firstNameLength": "This field must include minimum 3 and maximum 64 Latin symbols",
+    "lastNameRequired": "Please enter your last name",
+    "lastNameLength": "This field must include minimum 3 and maximum 64 Latin symbols",
+    "imageValid": "Image must be one of type(s): {{ value }}",
+    "phoneRequired": "Please enter a phone number",
+    "phoneValid": "Please enter a valid phone number in format +1 (***) ***-****",
+    "addressValid": "Please enter a valid address",
+    "representativeValid": "Please enter a valid representative name",
+    "textMinLength": "It should contain at least 3 characters",
+    "textMaxLength": "It should contain no more than 64 characters",
+    "arrayFieldMinLength": "It should contain at least than {{ value }} item",
+    "arrayFieldMaxLength": "It should contain no more than {{ value }} item",
+    "domainValid": "Please enter a valid domain"
+  },
+  "pages": {
+    "home": {
+      "pageTitle": "Home Page",
+      "table": {
+        "btnItemAdd": "Add row",
+        "btnItemRemove": "Remove row",
+        "btnItemCreate": "Create row",
+        "columns": {
+          "lastName": "Last Name",
+          "firstName": "First Name",
+          "id": "ID",
+          "age": "Age",
+          "fullName": "Full name",
+          "country": "Country"
+        },
+        "modal": {
+          "title": "Modal title"
+        }
+      }
+    }
+  }
+}

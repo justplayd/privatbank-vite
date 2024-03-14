@@ -1,0 +1,249 @@
+// Configure ESLint -> https://eslint.org/docs/latest/use/configure/
+{
+  "root": true,
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "chrome": true
+    // "jest": true
+  },
+  "env": {
+    // An environment provides predefined global variables. The available environments are:
+    "browser": true,
+    "node": true,
+    "es2023": true,
+    "worker": true
+    // "jest": true
+  },
+  "extends": [
+    // "react-app/jest",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    //"plugin:jest/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "simple-import-sort",
+    "react-refresh",
+    "@typescript-eslint",
+    "prettier"
+    // "jest"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "ecmaVersion": "latest",
+    // Allows for the parsing of modern ECMAScript features,
+    "sourceType": "module",
+    // Allows for the use of imports,
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "templateStrings": true,
+      "arrowFunctions": true,
+      "blockBindings": true,
+      "modules": true,
+      "forOf": true,
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "rules": {
+    /*
+    "react-refresh/only-export-components": [
+      "warn",
+      {
+        "allowConstantExport": true
+      }
+    ],*/
+    "camelcase": 0,
+    "class-methods-use-this": 0,
+    "comma-style": [
+      "error",
+      "last"
+    ],
+    "consistent-return": 0,
+    "implicit-arrow-linebreak": 0,
+    "import/no-cycle": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "import/prefer-default-export": 0,
+    "jsx-a11y/no-onchange": 0,
+    "linebreak-style": 0,
+    "no-console": 0,
+    "no-empty-function": 0,
+    "no-mixed-spaces-and-tabs": 0,
+    "no-shadow": 0,
+    "no-underscore-dangle": 0,
+    "no-unneeded-ternary": [
+      "error"
+    ],
+    "no-unused-vars": 0,
+    "no-use-before-define": 0,
+    "no-useless-escape": 0,
+    "no-useless-return": 0,
+    "object-curly-newline": 0,
+    "prettier/prettier": "error",
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "semi": 0,
+    "space-before-function-paren": 0,
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "exceptions": [
+          "-"
+        ]
+      }
+    ],
+    "no-comma-dangle": 0,
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": 0,
+    /* For React */
+    "react-hooks/exhaustive-deps": 0,
+    "react/destructuring-assignment": [
+      2,
+      "always",
+      {
+        "ignoreClassFields": true
+      }
+    ],
+    "react/display-name": 0,
+    "react/jsx-curly-brace-presence": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/no-array-index-key": 0,
+    "react/no-unescaped-entities": 0,
+    "react/no-unknown-property": [
+      "error",
+      {
+        "ignore": [
+          "jsx",
+          "global",
+          "css"
+        ]
+      }
+    ],
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/sort-comp": [
+      2,
+      {
+        "order": [
+          "static-methods",
+          "static-variables",
+          "instance-variables",
+          "lifecycle",
+          "everything-else",
+          "render"
+        ]
+      }
+    ],
+    "react/state-in-constructor": [
+      1,
+      "never"
+    ],
+    /* For Typescript */
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/no-unused-vars": [
+      "error"
+    ],
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/semi": [
+      "error",
+      "always"
+    ],
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/no-var-requires": 0
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx",
+        "*.js",
+        "*.jsx"
+      ],
+      "rules": {
+        // Other plugin - https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md
+        // This plugin - https://www.npmjs.com/package/eslint-plugin-simple-import-sort
+        "simple-import-sort/imports": [
+          "error",
+          {
+            "groups": [
+              [
+                // Packages. `react` related packages come first.
+                "^react",
+                "^@?\\w",
+                // Side effect imports.
+                "^\\u0000"
+              ],
+              [
+                "^@mui(/.*|$)"
+              ],
+              // logicLayers
+              [
+                "^@/logicLayers/(application|domain|infrastructure)(/.*|$)"
+              ],
+              // config
+              [
+                "^@/config(/.*|$)"
+              ],
+              // Internal packages.
+              [
+                "^@/separatedModules/(layouts|pages|views|containers)(/.*|$)"
+              ],
+              // Internal packages.
+              [
+                "^@/separatedModules/components(/.*|$)"
+              ],
+              // utils
+              [
+                "^@/utils(/.*|$)"
+              ],
+              // constants or types or enums
+              [
+                "^@/subsidiaryBinders/(constants|types|enums)(/.*|$)"
+              ],
+              // i18n
+              [
+                "^@/i18n(/.*|$)"
+              ],
+              // assets
+              [
+                "^@/assets(/.*|$)"
+              ],
+              // Parent imports. Put `..` last.
+              [
+                "^\\.\\.(?!/?$)",
+                "^\\.\\./?$"
+              ],
+              // Other relative imports. Put same-folder imports and `.` last.
+              [
+                "^\\./(?=.*/)(?!/?$)",
+                "^\\.(?!/?$)",
+                "^\\./?$"
+              ],
+              // helpers imports.
+              [
+                ".+/helpers$"
+              ],
+              // Style imports.
+              [
+                ".+/style$",
+                "^.+\\.s?css$"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+html {
+  // scroll-behavior: smooth; // плавний скролл до якорів
+  // min-height: 100vh;
+  height: 100vh;
+}
+
+body {
+  // height: 100%; // then => document.documentElement.scrollTop = 0;
+  // min-height: 100vh;
+  height: 100vh;
+  overflow: auto;
+  overflow-x: hidden;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: var(--font), sans-serif !important;
+  color: var(--default-gray-800);
+  letter-spacing: 0;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+
+  * {
+    word-break: keep-all;
+    word-wrap: break-word;
+    box-sizing: inherit;
+    font-family: var(--font), sans-serif !important;
+
+    &::before,
+    &::after {
+      box-sizing: inherit;
+    }
+
+    /*
+    | Override black outline in most cases
+    */
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.menu-open {
+    height: 90vh;
+    min-height: 90vh;
+    overflow: hidden;
+
+    .wrapper {
+      min-height: inherit;
+      height: inherit;
+    }
+  }
+}
+
+/*
+// Avoid Chrome to see Safari hack
+@supports (-webkit-touch-callout: none) {
+    // The hack for Safari
+    height: -webkit-fill-available;
+}
+*/
+// @media (prefers-color-scheme: light) {}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    // animation-delay: -1ms !important;
+    // animation-duration: 1ms !important;
+    // animation-iteration-count: 1 !important;
+    // background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    // transition-duration: 0s !important;
+    // transition-delay: 0s !important;
+  }
+}
+
+.wrapper {
+  // min-height: 100vh;
+  // height: 100vh;
+  // display: grid;
+  // grid-template-rows: auto 1fr auto;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.img-fluid,
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  // color: var(--extended-blue-500);
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+p,
+a {
+  //font-size: 16px;
+  //line-height: 1.5;
+}
+
+a {
+  // color: var(--primary-800);
+  @include transition(.2s ease-in-out);
+
+  &:hover {
+    // color: var(--dark-orchid);
+  }
+}
+
+*::selection {
+  color: var(--white);
+  background: var(--extended-blue-500);
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-none {
+  display: none !important;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-spin-slow-1-5 {
+  animation: spin 1.5s linear infinite;
+}
+
+.icon {
+  @include flex-inline-center;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.border-0 {
+  border: none !important;
+}
+
+.Mui-disabled {
+  pointer-events: none !important;
+}
+
+.bg-img-centered {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

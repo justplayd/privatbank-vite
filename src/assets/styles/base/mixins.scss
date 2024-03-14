@@ -1,0 +1,94 @@
+@mixin text-cut($col) {
+  display: -webkit-box;
+  -webkit-line-clamp: $col;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin background($size, $url) {
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: center center;
+  background-image: url($url);
+}
+
+@mixin columns($col, $margin) {
+  -webkit-columns: $col;
+  -moz-columns: $col;
+  columns: $col;
+  -webkit-column-gap: $margin;
+  -moz-column-gap: $margin;
+  column-gap: $margin;
+  break-after: column;
+}
+
+@mixin font($size: false, $colour: false, $weight: false, $lh: false) {
+  font-family: $font, sans-serif;
+
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $colour {
+    color: $colour;
+  }
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+@mixin input-placeholder {
+  &::placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+@mixin transition($args...) {
+  transition: $args;
+}
+
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin a-attr($attribute, $color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  #{$attribute}: $solid-color;
+  #{$attribute}: $color;
+}
+
+@mixin hover-transition($style: all, $duration: 0.25s) {
+  transition: $style $duration;
+  transition-timing-function: cubic-bezier(0.15, 0, 0, 1);
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-inline-center() {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
