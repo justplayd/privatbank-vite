@@ -4,6 +4,9 @@
 - npm install
 - npm run start
 
+## For improvment (if i had move time):
+- TS model types
+- custom useTable hook
 
 ### Реалізувати додаток котрий буде відображати дані у виді таблиці.
 | Task  | Result |
