@@ -1,0 +1,91 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --font: 'Inter';
+
+  --dark-orchid: #9D28B5;
+  --white: #fff;
+  --black: #000;
+
+  --gradient-1: linear-gradient(66deg, #9d28b5 6.43%, #6b1c9f 93.35%);
+  --gradient-2: linear-gradient(116deg, #6b1c9f 9.12%, #9d28b5 51.94%, #b52886 93.02%);
+  --gradient-3: linear-gradient(116deg, #5c1888 9.12%, #8f24a5 51.94%, #a52179 93.02%);
+
+  --primary-25: #fef8ff;
+  --primary-50: #F3E5F6;
+  --primary-800: #6b1c9f;
+  --primary-900: #4a1591;
+
+  /* Button colors */
+  --button-default: #3b82f6;
+  --button-hover: #2957d7;
+  --button-pressed: #12338d;
+  --button-disabled: #f2f0f3;
+  --button-content-disabled: #a695bc;
+
+  /* Blue Palette */
+  --extended-blue-50: #eff6ff;
+  --extended-blue-100: #dbeafe;
+  --extended-blue-200: #bfdbfe;
+  --extended-blue-300: #93c5fd;
+  --extended-blue-400: #60a5fa;
+  --extended-blue-500: #3b82f6;
+  --extended-blue-600: #2563eb;
+  --extended-blue-700: #1d4ed8;
+  --extended-blue-800: #1e40af;
+  --extended-blue-900: #1e3a8a;
+
+  /* Grey Palette */
+  --default-gray-50: #f9fafb;
+  --default-gray-100: #f3f4f6;
+  --default-gray-200: #e5e7eb;
+  --default-gray-300: #d1d5db;
+  --default-gray-400: #9ca3af;
+  --default-gray-500: #6b7280;
+  --default-gray-600: #4b5563;
+  --default-gray-700: #374151;
+  --default-gray-800: #1f2937;
+  --default-gray-900: #111827;
+
+  /* Yellow Palette */
+  --default-yellow-50: #fffbeb;
+  --default-yellow-100: #fef3c7;
+  --default-yellow-200: #fde68a;
+  --default-yellow-300: #fcd34d;
+  --default-yellow-400: #fbbf24;
+  --default-yellow-500: #f59e0b;
+  --default-yellow-600: #d97706;
+  --default-yellow-700: #b45309;
+  --default-yellow-800: #92400e;
+  --default-yellow-900: #78350f;
+  /* Red Palette */
+  --extended-red-50: #fef2f2;
+  --extended-red-100: #fee2e2;
+  --extended-red-200: #fecaca;
+  --extended-red-300: #fca5a5;
+  --extended-red-400: #f87171;
+  --extended-red-500: #ef4444;
+  --extended-red-600: #dc2626;
+  --extended-red-700: #b91c1c;
+  --extended-red-800: #991b1b;
+  --extended-red-900: #7f1d1d;
+
+  /* Green Palette */
+  --default-green-50: #ecfdf5;
+  --default-green-100: #d1fae5;
+  --default-green-200: #a7f3d0;
+  --default-green-400: #34d399;
+  --default-green-500: #10b981;
+  --default-green-600: #059669;
+  --default-green-700: #047857;
+  --default-green-800: #065f46;
+  --default-green-900: #064e3b;
+
+  --extended-cool-gray-900: #111827;
+
+  /* For Current Project */
+}
