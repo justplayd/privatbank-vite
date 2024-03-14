@@ -7,6 +7,7 @@
 ## For improvment (if i had move time):
 - TS model types
 - custom useTable hook
+- dont check git-husky work
 - connect scss modules for Vite (now i have a problem)
 
 ### Реалізувати додаток котрий буде відображати дані у виді таблиці.
