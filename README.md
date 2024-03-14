@@ -7,6 +7,7 @@
 ## For improvment (if i had move time):
 - TS model types
 - custom useTable hook
+- connect scss modules for Vite (now i have a problem)
 
 ### Реалізувати додаток котрий буде відображати дані у виді таблиці.
 | Task  | Result |
