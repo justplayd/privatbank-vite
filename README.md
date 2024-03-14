@@ -9,6 +9,7 @@
 - custom useTable hook
 - dont check git-husky work
 - connect scss modules for Vite (now i have a problem)
+- use react-hook-form for validation, it is very useful thing
 
 ### Реалізувати додаток котрий буде відображати дані у виді таблиці.
 | Task  | Result |
