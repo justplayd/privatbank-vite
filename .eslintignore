@@ -1,0 +1,8 @@
+/dist
+/build
+node_modules
+.vscode
+.history
+.next
+next-env.d.ts
+index.d.ts
